@@ -70,15 +70,16 @@ def game_play():
             star = False
         else:
             star = True
-        ii = choose_position(sec)
-        #replace in the board the element of the secound player choose in the position that he choose
-        board[ii -1]=C2
-        display_board()
-        if __check__(C2) == False:
-            print(sec+" you win")
-            star = False
-        else:
-            star = True
+        if star == True:
+            ii = choose_position(sec)
+            #replace in the board the element of the secound player choose in the position that he choose
+            board[ii -1]=C2
+            display_board()
+            if __check__(C2) == False:
+                print(sec+" you win")
+                star = False
+            else:
+                star = True
 
 
 #game start
